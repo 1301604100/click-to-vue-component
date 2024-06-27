@@ -1,0 +1,35 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "extends": [
+    "eslint-config-standard",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "space-before-function-paren": "off",
+    "camelcase": "off",
+    "semi": [2, "never"],
+    "comma-dangle": "off",
+    "no-unused-vars": "error",
+    "no-useless-escape": "off",
+    "prefer-promise-reject-errors": ["off", {"allowEmptyReject": true}],
+    "no-throw-literal":"off",
+    // "no-restricted-globals": ["error", "window", "document", "module", "require"],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment":"off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}
