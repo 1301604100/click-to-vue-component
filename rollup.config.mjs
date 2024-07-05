@@ -56,10 +56,8 @@ const packageFormats = inlineFormats || pkgOptions.formats || defaultFormats
 const packageConfigs = process.env.PROD_ONLY
   ? []
   : pkgOptions.formats
-  ? packageFormats.map(format => createConfig(format, outputConfigs[format]))
-  : pkgOptions.mutiples.map(options => createCustomConfig(options))
-
-export default packageConfigs
+    ? packageFormats.map(format => createConfig(format, outputConfigs[format]))
+    : pkgOptions.multiples.map(options => createCustomConfig(options))
 
 function createConfig(format, output, plugins = []) {
   if (!output) {
@@ -113,3 +111,5 @@ function createCustomConfig(options, plugins = []) {
     ],
   }
 }
+
+export default packageConfigs

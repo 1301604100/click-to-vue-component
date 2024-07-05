@@ -1,0 +1,70 @@
+{
+  "name": "@kerry/click-to-vue-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/click-to-vue-component.esm.js",
+  "module": "dist/click-to-vue-component.esm.js",
+  "types": "dist/click-to-vue-component.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "vue-cli-plugin.js",
+    "loader.js",
+    "client.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "https://github.com/1301604100",
+  "license": "ISC",
+  "type": "module",
+  "buildOptions": {
+    "multiples": [
+      {
+        "input": "src/index.ts",
+        "output": [
+          {
+            "banner": "#!/usr/bin/env node",
+            "file": "dist/click-to-vue-component.esm.js",
+            "format": "es"
+          }
+        ]
+      },
+      {
+        "input": "src/index.ts",
+        "output": [
+          {
+            "banner": "#!/usr/bin/env node",
+            "file": "dist/click-to-vue-component.cjs.cjs",
+            "format": "cjs"
+          }
+        ]
+      },
+      {
+        "input": "src/client.ts",
+        "output": [
+          {
+            "banner": "#!/usr/bin/env node",
+            "file": "./client.esm.js",
+            "format": "es"
+          }
+        ]
+      },
+      {
+        "input": "src/client.ts",
+        "output": [
+          {
+            "banner": "#!/usr/bin/env node",
+            "file": "./client.cjs.cjs",
+            "format": "cjs"
+          }
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "html-tags": "^3.3.1",
+    "parse5": "^7.1.2"
+  }
+}
